@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacked Waves Fixed</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+
+
+<body>
+<!-- NAVBAR-->
+<nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <div class="logo-icon"></div>
+      PREVENTRA
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+      <a href="#status">Status</a>
+      <a href="#heart_health">Heart Health</a>
+      <a href="#diabetes_health">Diabetes Health</a>
+      <a href="#lung_health">Lung Health</a>
+      <a href="#dash-board">Dashboard</a>
+      
+    </div>
+
+    <!-- Right section -->
+    <div class="nav-right">
+      <div class="bell">🔔</div>
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="avatar">
+    </div>
+  </nav>
+<!-- Page 1 with 3 stacked waves -->
+<section class="page1">
+  <div class="content">
+    <div class="userFirstName"> HELLO, {username}</div>
+    <div class="welcome">WELCOME TO PREVENTRA</div>
+    <div class="tagline">Every report tells a story. We listen, we learn, we care.</div>
+  </div>
+  
+  <!--waves-->
+  <div class="wave-container">
+    <svg class="wave1" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0 60 Q360 20 720 60 T1440 60 V120 H0 Z"></path>
+    </svg>
+    <svg class="wave2" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0 60 Q360 80 720 60 T1440 60 V120 H0 Z"></path>
+    </svg>
+    <svg class="wave3" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0 60 Q360 40 720 60 T1440 60 V120 H0 Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Page 2 // general body metrics or status -->
+<section id="status" class="status">
+  <div class="content2">
+    
+    <div class="card" id="bmiCard">
+      <div class="icon">💪</div>
+      <h3>BMI</h3>
+      <button>Calculate</button>
+    </div>
+    <!--calculate the bmi-->
+    <!-- BMI Input Modal -->
+<div id="bmiModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h4>Calculate BMI</h4>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter height in cm"><br><br>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter weight in Kg"><br><br>
+
+    <button id="calculateBmi">Calculate</button>
+  </div>
+</div>
+
+<!-- Result Modal -->
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+    <span class="closeResult">&times;</span>
+    <h2 id="bmiResult">Your BMI is: --</h2>
+  </div>
+</div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>Body Fat%</h3>
+      <button>Calculate</button>
+    </div>
+    <div class="card">
+      <div class="icon">📏</div>
+      <h3>Muscle Fat%</h3>
+      <button>Calculate</button>
+    </div>
+    <div class="card">
+      <div class="icon">🔥</div>
+      <h3>Waist-Hip Ratio</h3>
+      <button>Calculate</button>
+    </div>
+    <div class="card">
+      <div class="icon">⚖️</div>
+      <h3>Ideal Body Weight</h3>
+      <button>Calculate</button>
+    </div>
+    <div class="card">
+      <div class="icon">🩸</div>
+      <h3>Obesity Risk Category</h3>
+      <button>Calculate</button>
+    </div>
+  </div>
+</section>
+
+<!-- Page 3 -->
+<section class="heart_health" id="heart_health">
+  <div class="content3">heart</div>
+</section>
+
+<!-- Page 4 -->
+<section class="diabetes_health" id="diabetes_health">
+  <div class="content4">diabetes</div>
+</section>
+
+<!-- Page 5 -->
+<section class="lung_health" id="lung_health">
+  <div class="content5">lung</div>
+</section>
+
+<!--page 6-->
+<section class="dash-board" id="dash-board">
+  <div class="content6">dashboard</div>
+</section>
+
+
+<script src="scripts.js"></script>
+</body>
+</html>

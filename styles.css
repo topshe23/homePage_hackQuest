@@ -1,0 +1,299 @@
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow-x: hidden; scroll-behavior: smooth; }
+    body{
+      background: #222;
+    }
+    /* NAVBAR */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffb347, #ffcc33); /* sample bg */
+  height: 200vh; /* just for scroll demo */
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(20px); /* frosted glass blur */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  padding: 3px 30px;
+  z-index: 1000;
+}
+
+/* Left section (Logo + text) */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #bb560e;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  background: url('./hackquest_logo.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Middle section (menu) */
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #f4eded;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #055e4c;
+}
+
+/* Right section (icons) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bell {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  padding: 8px;
+  transition: background 0.3s ease;
+}
+
+.bell:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      flex-direction: column;
+    }
+
+    .page1 { background: url('1stpagebg.png') no-repeat center center;
+      background-size: cover;
+    background-attachment: fixed; }
+    .status { background:linear-gradient(150deg,#82f4dd,#2fa18a,#026b79,#022679) ; }
+    .heart_health{ background:linear-gradient(150deg,#82f4dd,#2fa18a,#026b79,#022679) ;}
+    .diabetes_health { background:linear-gradient(150deg,#82f4dd,#2fa18a,#026b79,#022679) ;}
+    .lung_health { background:linear-gradient(150deg,#82f4dd,#2fa18a,#026b79,#022679) ;}
+    .dash-board{background:linear-gradient(150deg,#82f4dd,#2fa18a,#026b79,#022679) ;}
+    .content {
+      min-width: 70vw;
+      min-height: 60vh;
+      background: rgba(255, 255, 255, 0.2); /* transparent white */
+      backdrop-filter: blur(10px); /* applies blur effect */
+      -webkit-backdrop-filter: blur(10px); /* Safari support */
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 5px black;
+      padding: 50px;
+      align-self: center;
+    }
+    .welcome{
+      font-size: 2rem;
+      font-weight: bolder;
+      text-transform: uppercase;
+      font-family: "Arial", sans-serif;
+
+      /* Blue → Green gradient */
+       color: transparent;
+      background: linear-gradient(90deg, #2ccaf6, #047f41);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientMove 4s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .tagline{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color:white;
+      font-size: 17px;
+    }
+    /* Wave container covers bottom fully */
+    .wave-container {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    /* Wave layers stacked without gaps */
+    .wave1 path {
+      fill: hsl(203, 88%, 23%);
+      opacity: 0.9;
+      animation: waveAnim1 4s ease-in-out infinite alternate;
+    }
+    .wave2 path {
+      fill: #1ea4c6;
+      opacity: 0.7;
+      animation: waveAnim2 6s ease-in-out infinite alternate;
+    }
+    .wave3 path {
+      fill: hsl(176, 96%, 27%);
+      opacity: 0.6;
+      animation: waveAnim3 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes waveAnim1 {
+      0% { d: path("M0 80 Q360 40 720 80 T1440 80 V180 H0 Z"); }
+      100% { d: path("M0 80 Q360 120 720 80 T1440 80 V180 H0 Z"); }
+    }
+    @keyframes waveAnim2 {
+      0% { d: path("M0 90 Q360 100 720 90 T1440 90 V180 H0 Z"); }
+      100% { d: path("M0 90 Q360 40 720 90 T1440 90 V180 H0 Z"); }
+    }
+    @keyframes waveAnim3 {
+      0% { d: path("M0 100 Q360 60 720 100 T1440 100 V180 H0 Z"); }
+      100% { d: path("M0 100 Q360 140 720 100 T1440 100 V180 H0 Z"); }
+    }
+
+    /*statusPage   */
+     .content2{
+        display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;    /* controls total width of grid */
+  margin: 0 auto;      /* centers the grid */
+    }
+
+    .card {
+      background: rgba(5, 60, 120, 0.5);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+      max-height: 40vh;
+    }
+    .card h3 {
+  font-size: 1rem;   /* default ~16px, adjust smaller as needed */
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 0.9rem; /* for smaller descriptive text */
+}
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #27ae60;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #f1f1f1;
+      transform: scale(1.05);
+    }
+    /*bmi---------------------------------------------------*/
+    .modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #1ebee2;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 60vw;
+  max-height:60vh;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 1.25rem;
+}
+#bmiModal {
+  z-index: 5;
+}
+#resultModal {
+   z-index: 6; /* stays above bmiModal */
+}
